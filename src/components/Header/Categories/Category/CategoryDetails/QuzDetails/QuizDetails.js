@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 const QuizDetails = ({ quiz }) => {
-    console.log(quiz)
+
     const { question, options, correctAnswer } = quiz;
     const diffToast = () => {
         toast(correctAnswer)
