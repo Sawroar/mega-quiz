@@ -6,6 +6,7 @@ const CategoryDetails = () => {
     const quiz = useLoaderData();
     const quizDetails = quiz.data.questions
 
+
     return (
         <div className='container'>
             <h3>Every thing About quiz </h3>
