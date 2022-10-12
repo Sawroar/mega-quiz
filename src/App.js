@@ -13,11 +13,12 @@ function App() {
       path: '/', element: <Main></Main>,
       children: [
         { path: '/', loader: () => fetch('https://openapi.programming-hero.com/api/quiz'), element: <Categories></Categories> },
-        { path: '/statistics', element: <Statistics></Statistics> },
+        { path: '/statistics', loader: () => fetch('https://openapi.programming-hero.com/api/quiz'), element: <Statistics></Statistics> },
         { path: 'blog', element: <Blog></Blog> }, { path: '/quiz/:quizId', loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`), element: <CategoryDetails></CategoryDetails> }
       ]
 
-    }, { path: '*', element: <h2>This Router Not Found</h2> }
+    },
+    { path: '*', element: <h2>This Router Not Found</h2> }
   ])
   return (
     <div className='bg-dark'>

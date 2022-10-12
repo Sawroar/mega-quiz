@@ -5,7 +5,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className='bg-light rounded p-1  '>
+        <div className='bg-secondary rounded p-1  '>
             <nav className="navbar navbar-expand-lg bg-light ">
                 <div className="d-flex align-items-center  container shadow-sm p-3  mt-3 mb-5 bg-body rounded">
                     <div className=''>
